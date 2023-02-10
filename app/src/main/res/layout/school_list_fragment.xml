@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?actionBarSize"
+      app:menu="@menu/toolbar_menu"
+      app:navigationIcon="@drawable/ic_navigation"
+      app:title="@string/app_name" />
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_school" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/error_content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/screen_margin"
+        android:orientation="vertical">
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/error_message_view"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textAppearance="?textAppearanceBody1"
+          android:textColor="?colorError"
+          tools:text="Some error" />
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/retry_button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginTop="@dimen/items_margin"
+          android:background="?selectableItemBackground"
+          android:padding="@dimen/button_padding"
+          android:text="@string/retry"
+          android:textAppearance="?textAppearanceHeadline6"
+          android:textColor="?colorAccent" />
+
+    </LinearLayout>
+  </FrameLayout>
+</LinearLayout>

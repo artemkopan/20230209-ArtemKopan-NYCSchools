@@ -1,0 +1,12 @@
+<resources>
+  <string name="app_name">NYC Schools</string>
+
+  <string name="error_unknown">Unknown error</string>
+  <string name="error_no_internet_connection">No internet connection</string>
+  <string name="show_sat_results">Show SAT results</string>
+  <string name="retry">Retry?</string>
+  <string name="refresh">Refresh</string>
+  <string name="math_result">Math result:</string>
+  <string name="reading_result">Reading result\n</string>
+  <string name="writing_result">Writing result</string>
+</resources>
